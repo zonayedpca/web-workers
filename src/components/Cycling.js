@@ -5,7 +5,7 @@ import Cycle from '../assets/cycle.png';
 const INTIAL_POSITION = -100;
 const { width } = window.screen;
 
-const Cycling = () => {
+const Cycling = ({ status }) => {
     const [x, setX] = useState(INTIAL_POSITION);
 
     const setPosition = () => {
@@ -26,6 +26,7 @@ const Cycling = () => {
         <div className="cycle-area">
             <div style={{ left: `${x}px` }} className="cycle-image">
                 <img src={Cycle} alt="cycle" />
+                <span style={{ background: !status ? '#333': '#F44336' }} className="banner">{!status ? `Let's Go!` : `Oh! I can't move`}</span>
             </div>
         </div>
     )

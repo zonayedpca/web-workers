@@ -1,7 +1,7 @@
 const worker = () => {
   let count = 0;
   const countFunc = () => {
-    while(count < 900719925) {
+    while(count < 1000000000) {
       count++;
     }
   }

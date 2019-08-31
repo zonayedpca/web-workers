@@ -1,26 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import noWorker from '../utils/no-worker';
 
-const Worker = () => {
+const Worker = ({ setStatus }) => {
   const [count, setCount] = useState(0);
-  const [disabled, setDisabled] = useState(true);
 
   const handleClick = () => {
-      if(disabled) {
-          const value = noWorker();
-          setDisabled(false);
-          setCount(value);
-      } else {
-          setCount(0);
-          setDisabled(true);
-      }
+      setStatus(true);
+      setTimeout(() => {
+          const counted = noWorker();
+          setCount(counted);
+          setStatus(false);
+      }, 0);
+  }
+
+  const handleReset = () => {
+      setCount(0);
   }
 
   return (
     <div>
       <h2>Without Web Worker</h2>
-      <button onClick={handleClick}>{ disabled ? 'Start' : 'Stop' }</button>
+      <button onClick={handleClick}>Start</button>
+      <button onClick={handleReset}>Reset</button>
       <pre>{ count }</pre>
     </div>
   )
