@@ -20,7 +20,10 @@ function App() {
         <NoWorker setStatus={handleStatus} />
       </div>
       <footer>
-        Footer
+        <ul>
+          <li>By <a target="_blank" rel="noopener noreferrer" href="https://zonayed.me">Zonayed</a> with <span className="red">❤</span></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/zonayedpca/web-workers">Source Code</a></li>
+        </ul>
       </footer>
     </div>
   );

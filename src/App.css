@@ -1,9 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Francois+One&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Francois One', sans-serif;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  margin: 0 5px;
+  padding: 15px 35px;
+  border-radius: 4px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+}
+
+button.start {
+  background-color: #8BC34A;
+}
+
+button.reset {
+  background-color: #FFC107;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  display: inline-block;
+  margin: 0 5px;
+  color: #fff;
+}
+
+ul li .red {
+  color: #F44336;
+}
+
+ul li a {
+  color: #333;
+  background: #eee;
+  padding: 1px 5px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
 .App {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   flex-wrap: wrap;
   overflow: hidden;
+  background: #e1f3ff;
 }
 
 .App>* {
@@ -13,7 +68,6 @@
 .worker-area {
   display: flex;
   flex-wrap: wrap;
-  background: #607D8B;
 }
 
 .worker-area>* {
@@ -21,15 +75,30 @@
   text-align: center;
 }
 
+.worker-area h2 {
+  margin-bottom: 25px;
+  font-size: 32px;
+}
+
+.worker-area pre {
+  width: 245px;
+  background: #fff;
+  margin: 0 auto;
+  margin-top: 25px;
+  font-size: 32px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  box-shadow: 4px 4px 10px -10px #333;
+}
+
 .worker {
-  background: #FF9800;
+
 }
 
 .cycle-area {
   position: relative;
   width: 100%;
-  padding: 25px 0;
-  background: #e7e7e7;
+  padding: 50px 0;
 }
 
 .cycle-image {
@@ -52,4 +121,7 @@
 
 footer {
   background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

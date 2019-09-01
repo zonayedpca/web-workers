@@ -34,8 +34,8 @@ const Worker = () => {
   return (
     <div className="worker">
       <h2>With Web Worker</h2>
-      <button onClick={handleClick}>{ enabled ? 'Stop' : 'Start' }</button>
-      <button onClick={handlereset}>Reset</button>
+      <button className="start" onClick={handleClick}>{ enabled ? 'Stop' : 'Start' }</button>
+      <button className="reset" onClick={handlereset}>Reset</button>
       <pre>{ count }</pre>
     </div>
   )

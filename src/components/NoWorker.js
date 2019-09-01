@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import noWorker from '../utils/no-worker';
 
@@ -11,7 +11,7 @@ const Worker = ({ setStatus }) => {
           const counted = noWorker();
           setCount(counted);
           setStatus(false);
-      }, 0);
+      }, 100);
   }
 
   const handleReset = () => {
@@ -21,8 +21,8 @@ const Worker = ({ setStatus }) => {
   return (
     <div>
       <h2>Without Web Worker</h2>
-      <button onClick={handleClick}>Start</button>
-      <button onClick={handleReset}>Reset</button>
+      <button className="start" onClick={handleClick}>Start</button>
+      <button className="reset" onClick={handleReset}>Reset</button>
       <pre>{ count }</pre>
     </div>
   )

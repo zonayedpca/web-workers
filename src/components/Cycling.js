@@ -10,7 +10,7 @@ const Cycling = ({ status }) => {
 
     const setPosition = () => {
         setTimeout(() => {
-            if(x < width + INTIAL_POSITION) {
+            if(x < width + -(INTIAL_POSITION)) {
                 setX(x + 2);
             } else {
                 setX(INTIAL_POSITION);
