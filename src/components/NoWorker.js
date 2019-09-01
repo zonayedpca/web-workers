@@ -20,6 +20,7 @@ const Worker = ({ setStatus }) => {
 
   return (
     <div>
+      <p>Count from 0 to 1000000000</p>
       <h2>Without Web Worker</h2>
       <button className="start" onClick={handleClick}>Start</button>
       <button className="reset" onClick={handleReset}>Reset</button>

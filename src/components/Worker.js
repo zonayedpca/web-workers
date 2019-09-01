@@ -33,6 +33,7 @@ const Worker = () => {
 
   return (
     <div className="worker">
+      <p>Count from 0 to 1000000000</p>
       <h2>With Web Worker</h2>
       <button className="start" onClick={handleClick}>{ enabled ? 'Stop' : 'Start' }</button>
       <button className="reset" onClick={handlereset}>Reset</button>
